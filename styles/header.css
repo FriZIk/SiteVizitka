@@ -1,17 +1,36 @@
 #head {
     width:100%;
-    height:60px;
+    height:100px;
     background:#19191A;
-    position:fixed;
+    position: absolute;
     top:0;
     left:0;
 }
 
 #about{
-position: absolute;
-width: 1440px;
-height: 647px;
-left: 0px;
-top: 73px;
-background: url(images/background.jpg);
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    left: 0px;
+    top: 100px;
+    object-fit: fill;
+    background: url(../images/background.jpg);
+}
+
+#info{
+    position: absolute;
+    width: 700px;
+    height: 177px;
+    left: 600px;
+    top: 300px;
+    background: #19191A;
+} 
+
+#infotext{
+    position: absolute;
+    width: 1440px;
+    height: 462px;
+    left: 0px;
+    top: 10000000px;
+    background: #222123;
 }
