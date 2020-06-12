@@ -6,7 +6,9 @@ $(document).ready(function()
       loop: true,
       autoplay: true,
       smartSpeed: 1000,
-      autoplayTimeout: 3500
+      autoplayTimeout: 3500,
+      // nav:true,
+      dots: true
     }
   );
 });
