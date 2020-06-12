@@ -1,36 +1,39 @@
-#head {
-    width:100%;
-    height:100px;
-    background:#19191A;
-    position: absolute;
-    top:0;
-    left:0;
+.jumbotron 
+{
+  background-image: url('../images/background.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin:0 auto;
 }
 
-#about{
-    position: absolute;
-    width: 100%;
-    height: 750px;
-    left: 0px;
-    top: 100px;
-    object-fit: fill;
-    background: url(../images/background.jpg);
+#aboutme
+{
+  margin : 0 auto;
+  text-align: center;
+  background-color:#222123;
 }
 
-#info{
-    position: absolute;
-    width: 700px;
-    height: 177px;
-    left: 600px;
-    top: 300px;
-    background: #19191A;
-} 
+#Portfolio
+{
+  margin: 0 auto;
+  background-color:#19191A;
+  width: 100%;
+  height: 850px;
+  text-align:center;
+  position:relative;
+}
 
-#infotext{
-    position: absolute;
-    width: 1440px;
-    height: 462px;
-    left: 0px;
-    top: 10000000px;
-    background: #222123;
+#Contact
+{
+  background-color:#101010;
+  width: 100%;
+  height: 100px;
+  text-align:center;
+  position:relative"
+}
+
+body 
+{
+  overflow-x: hidden;
 }

@@ -6,65 +6,169 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <title>Hello, world!</title>
-    </head>
-    <body>
         <link rel="stylesheet" href="styles/header.css">
-        <div id="head"></div>
-        <div id="about"></div>
-        <div id="info"></div>
+        
+        <script type="text/javascript">
+          $(document).ready(function(){
+             $("#menu").on("click","a", function (event) {
+                 event.preventDefault();
+                 var id  = $(this).attr('href'),
+                     top = $(id).offset().top;
+                 $('body,html').animate({scrollTop: top}, 1500);
+             });
+         });
+        </script>
 
+        <title>Персональный сайт Нестеренко Пётра</title>
+        <link rel="shortcut icon" href="images/processor.ico" type="image/x-icon">
 
-        <div class="container">
-            <h2>Carousel Example</h2>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
+      </head>
+    <body>
+
+      <!-- Верхний тулбар -->
+      <nav class ="navbar navbar-inverse" style="margin: 0 auto;background-color:#19191A;border-radius:0">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Персональный сайт Нестеренко Петра</a>
+          </div>
+          <nav id="menu">
+            <ul class="nav navbar-nav navbar-right">
+              <!-- Якорные ссылки -->
+              <li class="active"><a href="#main">Главная</a></li>
+              <li><a href="#aboutme">Обо мне</a></li>
+              <li><a href="#Portfolio">Портфолио</a></li>
+              <li><a href="#Contact">Контакты</a></li>
+            </ul>
+          </nav>
+          </div>
+      </nav>
+    
+      <!-- Моя фотография и общая информация -->
+    <div id="Info">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="row" style="color:#FFFFFF">
+          <div class="container" style="height: 500px">
           
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-          
-                <div class="item active">
-                  <img src="/images/background.jpg" alt="Los Angeles" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>Los Angeles</h3>
-                    <p>LA is always so much fun!</p>
-                  </div>
-                </div>
-          
-                <div class="item">
-                  <img src="/images/background.jpg" alt="Chicago" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>Chicago</h3>
-                    <p>Thank you, Chicago!</p>
-                  </div>
-                </div>
-              
-                <div class="item">
-                  <img src="/images/background.jpg" alt="New York" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>New York</h3>
-                    <p>We love the Big Apple!</p>
-                  </div>
-                </div>
-            
+              <div class="col-md-4"> 
+                <!-- <img src="images/iam.png" style="position: absolute;height:550px;width:420px"> -->
+                <img src="images/iam.png" class="img-fluid" alt="Responsive image" style="position: absolute;height:550px;width:420px" >
               </div>
-          
-              <!-- Left and right controls -->
-              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-              </a>
+                <!-- <div class="col-md-8" style="background-color: #222123;text-align: center;padding-top: 90px;">  -->
+              <div class="col-md-8" style="background-color: #222123;text-align: center">
+                  <h1 class="display-4">Приветствую вас на своём сайте</h1>
+                  <p style="text-align:center"> Изучаю программрование и IT уже 5 лет, интересуюсь разработкой  встраиваемых систем и машинным обучением. Сейчас обучаюсь на кафедре математического обеспечения и применения ЭВМ, ИКТИБ ЮФУ(бывший ТРТУ/ТРТИ). Люблю решать сложные задачи и учиться новому.</p>
+              </div>
+
+
             </div>
           </div>
+      </div>
+    </div>
+
+      
+      <!-- Блок обо мне -->
+      <div id="aboutme">
+        <div class="row">
+          <h2 style="color:#FFFFFF">Область моих инетересов</h2>
+          <p class="lead" style="color:#FFFFFF">Чем я занимаюсь</p>
+          <!-- <hr /> -->
+          <div class="col-md-4" style="color:#FFFFFF">
+            <img src="images/ram.png" width=250 height=250>
+            <h3>Создание электронных устройств</h3>
+            <p>Разработка прототипов устройств на базе микроконтроллеров STM32, esp8266 и тд. Написание прошивок на языках C/C++.</p>
+          </div>
+          <div class="col-md-4" style="color:#FFFFFF">
+            <img src="images/processor.png" width=250 height=250>
+            <h3>Проектирование микросхем и печатных плат</h3>
+            <p>Разводка печатных плат в программа SprintLayout. Создание конфигураций для ПЛИС на языке VHDL. Создание принципиальных схем устройств в Fritzing</p>
+          </div>
+          <div class="col-md-4" style="color:#FFFFFF">
+            <img src="images/computing.png" width=250 height=250>
+            <h3>Разработка решений машинного зрения</h3>
+            <p>Создание моделей нейронных сетей на языке Python с использованием библиотек Tensorflow, Keras, PyTorch, matplotlib и pandas </p>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Блок порфтолио -->
+      <div id="Portfolio">
+        <div class = "container-fluid" >
+          <h2 style="color:#FFFFFF">Портфолио проектов</h2>
           
-    </body>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 1000px; margin: 0 auto">
+          <!-- Индикаторы -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+          
+            <!-- Слайды -->
+            <div class="carousel-inner">
+
+              <!-- Победа в хакатоне CybeGarden -->
+              <div class="item active">
+                <img src="images/hack.jpg" alt="Chania">
+                <div class="carousel-caption">
+                  <h3>Победа в хакатоне CyberGarden2019</h3>
+                  <p>Мы с командой одержали победу с приложением: "Электронный гербарий."</p>
+                </div>
+              </div>
+          
+              <!-- Разработка ПЛИС -->
+              <div class="item">
+                <img class="img-fluid" src="images/fpga.png" alt="Chicago">
+                <div class="carousel-caption">
+                  <h3>Разработка аппаратной реализации скростоной системы шифрования</h3>
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Распознавание съёмков с БПЛА -->
+              <div class="item">
+                <img class="img-fluid" src="images/cv.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                  <h3>ПОбеда в хакатоне ХакниCOVID-19, проводимым администрацией Ростовской области</h3>
+                  <p>Наше "Приложение дополненной реальности для парковых зон с информационным насыщением" заняло первое место. Его цель привлечь людей к изучению истории, используя технологии дополненной реальности.</p>
+                </div>
+              </div>
+
+
+            </div>
+          
+            <!-- Вправо или влево -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Контакты -->
+      <div id="Contact">
+      <div class="container-fluid">
+        <div class="row" style="color:#FFFFFF">
+          <div class="col-md-4">
+            <p>© Copyright Нестеренко Пётр, 2020. Копирование материалов сайта запрещено, на самом деле, это я так для красивого словца</p>
+          </div>
+          <div class="col-md-1 navbar-right" styel="margin:"> 
+            <img class="img-fluid" src="images/youtube.png" class="img-fluid" alt="Responsive image" style="position: absolute;height:64px;width:64px">
+          </div>
+          <div class="col-md-1 navbar-right"> 
+            <img class="img-fluid" src="images/vk.png" class="img-fluid" alt="Responsive image" style="position: absolute;height:64px;width:64px">
+          </div>
+          <div class="col-md-1 navbar-right">
+            <img class="img-fluid" src="images/github.png" class="img-fluid" alt="Responsive image" style="position: absolute;height:64px;width:64px">
+          </div>
+          <div class="clearfix visible-lg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>
