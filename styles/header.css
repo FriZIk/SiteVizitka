@@ -7,21 +7,21 @@
   margin:0 auto;
 }
 
-#aboutme
-{
-  margin : 0 auto;
-  text-align: center;
-  background-color:#222123;
-}
-
-#Portfolio
+.TopBar
 {
   margin: 0 auto;
   background-color:#19191A;
-  width: 100%;
-  height: 850px;
-  text-align:center;
-  position:relative;
+  border-radius:0;
+  margin:0;
+  border-radius: 0;
+}
+
+#aboutme
+{
+  data-aos: fade-up;
+  margin : 0 auto;
+  text-align: center;
+  background-color:#222123;
 }
 
 #Contact
@@ -36,4 +36,30 @@
 body 
 {
   overflow-x: hidden;
+}
+
+
+/* Блок для появления корусели */
+.home-demo .item {
+  background: #19191A;
+  flex: 1 1 100px;
+  padding: 10px;
+}
+.home-demo h2 {
+  color: #19191A;
+  text-align: center;
+  padding: 5rem 0;
+  margin: 0;
+  font-style: italic;
+  font-weight: 300;
+}
+.home-slider {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 601px) {
+  .home-demo .item {
+    margin: 5px;
+  }
 }

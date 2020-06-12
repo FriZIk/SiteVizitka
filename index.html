@@ -7,49 +7,61 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="styles/header.css">
-        
-        <script type="text/javascript">
-          $(document).ready(function(){
-             $("#menu").on("click","a", function (event) {
-                 event.preventDefault();
-                 var id  = $(this).attr('href'),
-                     top = $(id).offset().top;
-                 $('body,html').animate({scrollTop: top}, 1500);
-             });
-         });
-        </script>
+        <link rel="scripts" href="scripts/scrollup.js">
 
+        <!-- Scrollup надо бы сделать-->
+
+        <!-- Совиная корусель -->
+        <link rel="stylesheet" href="libs/owlcarousel/assets/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="libs/owlcarousel/assets/owl.theme.default.css"/>
+        <script src="libs/owlcarousel/owl.carousel.min.js"></script>
+        <script src="scripts/Owl_Init.js" type="text/javascript"></script>
+
+
+        <!-- Для появления эелментов при прокрутке (не работает)-->
+        <link rel="stylesheet" href="libs/aos-master/dist/aos.css">
+        <script src="libs/aos-master/dist/aos.js" type="text/javascript"></script>
+        <script src="scripts/Init_AOS.js" type="text/javascript"></script>
+
+
+        <!-- Плавный переход между якорными ссылками -->
+        <script src="scripts/plavniy.js" type="text/javascript"></script>
+
+
+        <!-- Заголовое и иконка сайта -->
         <title>Персональный сайт Нестеренко Пётра</title>
         <link rel="shortcut icon" href="images/processor.ico" type="image/x-icon">
 
       </head>
     <body>
-
+        
       <!-- Верхний тулбар -->
-      <nav class ="navbar navbar-inverse" style="margin: 0 auto;background-color:#19191A;border-radius:0">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Персональный сайт Нестеренко Петра</a>
-          </div>
-          <nav id="menu">
-            <ul class="nav navbar-nav navbar-right">
-              <!-- Якорные ссылки -->
-              <li class="active"><a href="#main">Главная</a></li>
-              <li><a href="#aboutme">Обо мне</a></li>
-              <li><a href="#Portfolio">Портфолио</a></li>
-              <li><a href="#Contact">Контакты</a></li>
-            </ul>
-          </nav>
-          </div>
-      </nav>
-    
+      <dev id="TopBar">
+        <nav class ="navbar navbar-inverse" style="margin: 0 auto;border-radius:0">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Персональный сайт Нестеренко Петра</a>
+            </div>
+            <nav id="menu">
+              <ul class="nav navbar-nav navbar-right">
+                <!-- Якорные ссылки -->
+                <li class="active"><a href="#main">Главная</a></li>
+                <li><a href="#aboutme">Обо мне</a></li>
+                <li><a href="#Portfolio">Портфолио</a></li>
+                <li><a href="#Contact">Контакты</a></li>
+              </ul>
+            </nav>
+            </div>
+        </nav>
+     </dev>
+
       <!-- Моя фотография и общая информация -->
     <div id="Info">
       <div class="jumbotron jumbotron-fluid">
         <div class="row" style="color:#FFFFFF">
           <div class="container" style="height: 500px">
           
-              <div class="col-md-4"> 
+              <div class="col-md-4" > 
                 <!-- <img src="images/iam.png" style="position: absolute;height:550px;width:420px"> -->
                 <img src="images/iam.png" class="img-fluid" alt="Responsive image" style="position: absolute;height:550px;width:420px" >
               </div>
@@ -65,7 +77,6 @@
       </div>
     </div>
 
-      
       <!-- Блок обо мне -->
       <div id="aboutme">
         <div class="row">
@@ -93,71 +104,35 @@
       
       <!-- Блок порфтолио -->
       <div id="Portfolio">
-        <div class = "container-fluid" >
-          <h2 style="color:#FFFFFF">Портфолио проектов</h2>
-          
-          <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 1000px; margin: 0 auto">
-          <!-- Индикаторы -->
-            <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-          
-            <!-- Слайды -->
-            <div class="carousel-inner">
-
-              <!-- Победа в хакатоне CybeGarden -->
-              <div class="item active">
-                <img src="images/hack.jpg" alt="Chania">
-                <div class="carousel-caption">
-                  <h3>Победа в хакатоне CyberGarden2019</h3>
-                  <p>Мы с командой одержали победу с приложением: "Электронный гербарий."</p>
-                </div>
-              </div>
-          
-              <!-- Разработка ПЛИС -->
-              <div class="item">
-                <img class="img-fluid" src="images/fpga.png" alt="Chicago">
-                <div class="carousel-caption">
-                  <h3>Разработка аппаратной реализации скростоной системы шифрования</h3>
-                  <p></p>
-                </div>
-              </div>
-
-              <!-- Распознавание съёмков с БПЛА -->
-              <div class="item">
-                <img class="img-fluid" src="images/cv.jpg" alt="Chicago">
-                <div class="carousel-caption">
-                  <h3>ПОбеда в хакатоне ХакниCOVID-19, проводимым администрацией Ростовской области</h3>
-                  <p>Наше "Приложение дополненной реальности для парковых зон с информационным насыщением" заняло первое место. Его цель привлечь людей к изучению истории, используя технологии дополненной реальности.</p>
-                </div>
-              </div>
-
-
-            </div>
-          
-            <!-- Вправо или влево -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <span class="sr-only">Next</span>
-            </a>
+      <div class="home-demo" style="background-color:#0C0A13;margin: 0;">
+        <h2 style="color:#FFFFFF;text-align: center">Портфолио проектов</h2>
+        <div class="owl-carousel home-slider" style="text-align:center;color:#FFFFFF">
+          <div class="item">
+            <h3>Победа в хакатоне CyberGarden2019</h3>
+            <img src="images/hack.jpg" alt="Chania">
+            <p style="padding:10px">Мы с командой одержали победу с приложением: "Электронный гербарий."</p>
+          </div>
+          <div class="item">
+            <h3>Разработка аппаратной реализации скростоной системы шифрования</h3>
+            <img class="img-fluid" src="images/fpga.png" alt="Chicago">
+          </div>
+          <div class="item">
+            <h3>ПОбеда в хакатоне ХакниCOVID-19, проводимым администрацией Ростовской области</h3>
+            <img class="img-fluid" src="images/cv.jpg" alt="Chicago">
+            <p style="padding:10px">Наше "Приложение дополненной реальности для парковых зон с информационным насыщением" заняло первое место. Его цель привлечь людей к изучению истории, используя технологии дополненной реальности.</p>
           </div>
         </div>
       </div>
+    </div>
 
       <!-- Контакты -->
       <div id="Contact">
       <div class="container-fluid">
-        <div class="row" style="color:#FFFFFF">
+        <div class="row" style="margin-bottom: auto;color:#FFFFFF">
           <div class="col-md-4">
             <p>© Copyright Нестеренко Пётр, 2020. Копирование материалов сайта запрещено, на самом деле, это я так для красивого словца</p>
           </div>
-          <div class="col-md-1 navbar-right" styel="margin:"> 
+          <div class="col-md-1 navbar-right"> 
             <img class="img-fluid" src="images/youtube.png" class="img-fluid" alt="Responsive image" style="position: absolute;height:64px;width:64px">
           </div>
           <div class="col-md-1 navbar-right"> 
