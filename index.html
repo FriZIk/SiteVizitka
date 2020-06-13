@@ -10,6 +10,7 @@
         <link rel="scripts" href="scripts/scrollup.js">
 
         <!-- Scrollup надо бы сделать-->
+        <script src="scripts/PageUp.js" type="text/javascript"></script>
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -60,24 +61,21 @@
      </dev>
 
       <!-- Моя фотография и общая информация -->
-      <div id="Info">
-        <div class="jumbotron jumbotron-fluid">
+      <div id="Info" class="jumbotron jumbotron-fluid">
           <div class="row" style="color:#FFFFFF">
 
-                <!-- Это я -->
                 <div class="col-md-4")> 
-                  <img src="images/iam.png" class="img-fluid" style="height:550px;width:420px;margin-left: 200px;" >
+                  <img src="images/iam.png" class="img-fluid" style="position: relative;height:550px;width:420px;margin-left:200px" >
                 </div>
                 
-                <!-- Это краткая информация обо мне -->
-                <div class="col-md-6 col-sm-2" style="margin-top: 100px;background-color: #222123;text-align: center">
+                
+                <div class="col-md-6" style="margin-top: 100px;background-color: #222123;text-align: center;margin-bottom: 0 auto;">
                     <h1 class="display-4" >Приветствую вас на своём сайте</h1>
                     <p style="text-align:center"> Изучаю программрование и IT уже 5 лет, интересуюсь разработкой  встраиваемых систем и машинным обучением. Сейчас обучаюсь на кафедре математического обеспечения и применения ЭВМ, ИКТИБ ЮФУ(бывший ТРТУ/ТРТИ). Люблю решать сложные задачи и учиться новому.</p>
                 </div>
 
             </div>
         </div>
-      </div> 
 
       <!-- Блок обо мне -->
       <div id="aboutme">
@@ -128,6 +126,12 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!--Кнопка наверх -->
+    <div class="scrollup">
+      <!-- Иконка fa-chevron-up (Font Awesome) -->
+      <i class="fa fa-chevron-up"></i>
     </div>
 
       <!-- Контакты -->
