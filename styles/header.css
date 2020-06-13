@@ -4,12 +4,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  margin:0 auto;
+  margin:0;
 }
 
 .TopBar
 {
-  margin: 0 auto;
+  margin: 0;
   background-color:#19191A;
   border-radius:0;
   margin:0;
@@ -18,8 +18,7 @@
 
 #aboutme
 {
-  data-aos: fade-up;
-  margin : 0 auto;
+  margin : 0;
   text-align: center;
   background-color:#222123;
 }
@@ -33,9 +32,9 @@
   position:relative"
 }
 
-body 
+html 
 {
-  overflow-x: hidden;
+   overflow-x: hidden;
 }
 
 
@@ -85,7 +84,7 @@ div.scrollup {
   right: 20px; /* расстояние от правого края */
   bottom: 20px; /* расстояние от нижнего края */
   padding: 4px 10px; /* отступы до содержимого блока */
-  font-size: 20px; /* размер шрифта (иконки) */
+  font-size: 50px; /* размер шрифта (иконки) */
   border-top-left-radius: 4px; /* скругление верхнего левого угла */
   border-top-right-radius: 4px; /* скругление верхнего правого угла */
   cursor: pointer; /* форма курсора */
