@@ -28,7 +28,6 @@
   background-color:#101010;
   width: 100%;
   width: 100%;
-  text-align:center;
   position:relative"
 }
 
@@ -91,6 +90,7 @@ div.scrollup {
   display: none; 
   text-align: center; 
   z-index: 99999;
+  background-color: #222123;
 }
 div.scrollup:hover {
   background-color: #000; 
